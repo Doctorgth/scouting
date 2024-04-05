@@ -17,5 +17,11 @@ services:
       - "5000:5000"
     depends_on:
       - db
+      
+  parsers:
+    build: ./parsers
+    ports:
+      - "5500:5500"
+
 volumes:
   postgres_data:
